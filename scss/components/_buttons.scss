@@ -1,0 +1,19 @@
+// Buttons
+.form-btn {
+	border: none;
+	border-radius: $border-radius-primary;
+	box-shadow: $box-shadow-3;
+	padding: 1rem;
+	background: $primary-color;
+	color: $secondary-color;
+	font-size: 1rem;
+
+	&:hover,
+	&:focus {
+		@include pop-on-hover-1;
+	}
+
+	@include respond-to-width(1024px) {
+		cursor: pointer;
+	}
+}

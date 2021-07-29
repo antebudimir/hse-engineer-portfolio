@@ -1,0 +1,35 @@
+// Summary
+#summary {
+	@include flex-layout(row, nowrap);
+	background: $primary-color;
+	color: $secondary-color;
+	padding: 0 0.5rem;
+
+	@include respond-to-width(580px) {
+		justify-content: space-around;
+	}
+}
+
+.overview {
+	@include flex-column-center;
+	padding: 0.8rem 0 0.5rem;
+	text-align: center;
+
+	& img {
+		width: 3rem;
+
+		@include respond-to-width(1024px) {
+			width: 5rem;
+		}
+	}
+}
+
+.overview-text {
+	margin-top: 0.5rem;
+	font-size: 0.9rem;
+
+	@include respond-to-width(1024px) {
+		margin-top: 1rem;
+		font-size: 1.1rem;
+	}
+}

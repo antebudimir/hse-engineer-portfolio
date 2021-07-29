@@ -1,0 +1,49 @@
+// Base - global styles
+* {
+	outline: none;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+	user-select: none;
+}
+
+html {
+	@include respond-to-width(600px) {
+		font-size: 120%;
+	}
+
+	@include respond-to-w-and-h(2200px, 1200px) {
+		font-size: 140%;
+	}
+
+	@include respond-to-height(2000px) {
+		font-size: 220%;
+	}
+}
+
+body {
+	@include sticky-footer;
+}
+
+ul,
+li {
+	list-style: none;
+}
+
+a {
+	color: $secondary-color;
+
+	&:hover,
+	&:focus {
+		@include pop-on-hover-2;
+	}
+}
+
+img {
+	display: block;
+}
+
+.hidden-visually {
+	@include hidden-visually;
+}

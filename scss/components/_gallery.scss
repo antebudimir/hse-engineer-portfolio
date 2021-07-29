@@ -1,0 +1,24 @@
+// Gallery
+.gallery-grid {
+	display: grid;
+	gap: 1rem;
+
+	@include respond-to-width(768px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@include respond-to-width(1024px) {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+.image-thumb {
+	border-radius: $border-radius-primary;
+	box-shadow: $box-shadow-3;
+	width: 100%;
+	height: auto;
+}
+
+.image-thumb:hover,
+.lightbox:focus > .image-thumb {
+	@include pop-on-hover-1;
+}

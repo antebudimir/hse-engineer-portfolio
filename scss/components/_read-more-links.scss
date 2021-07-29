@@ -1,0 +1,29 @@
+// Read More Links
+.read-more {
+	align-self: center;
+	border-radius: $border-radius-primary;
+	padding: 1rem;
+	font-size: 1rem;
+	text-decoration: none;
+
+	&:hover,
+	&:focus {
+		@include pop-on-hover-1;
+	}
+
+	@include respond-to-width(1024px) {
+		cursor: pointer;
+	}
+}
+
+.primary-link {
+	box-shadow: $box-shadow-2;
+	background-color: $secondary-color;
+	color: $primary-color;
+}
+
+.secondary-link {
+	box-shadow: $box-shadow-3;
+	background-color: $primary-color;
+	color: $secondary-color;
+}

@@ -1,0 +1,86 @@
+// FLEXBOX
+@mixin flex-layout($direction, $wrap) {
+	display: flex;
+	flex-flow: $direction $wrap;
+}
+
+@mixin flex-alignment($justify, $align) {
+	display: flex;
+	justify-content: $justify;
+	align-items: $align;
+}
+
+@mixin flex-row-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin flex-column-center {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin sticky-footer {
+	display: flex;
+	flex-flow: column nowrap;
+	min-height: 100vh;
+}
+
+@mixin pop-on-hover-1 {
+	transform: scale(1.06);
+	transition: transform 0.3s ease;
+}
+
+@mixin pop-on-hover-2 {
+	transform: scale(1.2);
+	transition: transform 0.3s ease;
+}
+
+@mixin hover-properties-1 {
+	border-radius: $border-radius-primary;
+	padding: 0.2rem;
+	background: $secondary-color;
+	color: $primary-color;
+	text-decoration: none;
+}
+
+@mixin hover-properties-2 {
+	border-radius: $border-radius-primary;
+	padding: 0.2rem;
+	background: $primary-color;
+	color: $secondary-color;
+	text-decoration: none;
+}
+
+// Visually hidden
+@mixin hidden-visually {
+	position: absolute;
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	overflow: hidden;
+	width: 1px;
+	height: 1px;
+	white-space: nowrap;
+}
+
+// Media queries
+@mixin respond-to-width($media) {
+	@media only screen and (min-width: $media) {
+		@content;
+	}
+}
+
+@mixin respond-to-height($media) {
+	@media only screen and (min-height: $media) {
+		@content;
+	}
+}
+
+@mixin respond-to-w-and-h($width, $height) {
+	@media only screen and (min-width: $width) and (min-height: $height) {
+		@content;
+	}
+}

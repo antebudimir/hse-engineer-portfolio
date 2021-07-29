@@ -1,0 +1,22 @@
+// Colors
+$primary-color: rgb(0, 154, 103);
+$primary-color-low-opacity: rgba(0, 154, 103, 0.4);
+$primary-color-high-opacity: rgba(0, 154, 103, 0.8);
+$secondary-color: rgb(255, 255, 255);
+$quaternary-color: rgba(255, 255, 255, 0.335);
+$quinary-color: rgb(212, 212, 212);
+$text-color-1: rgb(0, 0, 0);
+$scrollbar-background: rgb(236, 236, 236);
+
+// Borders
+$border-primary: 1px solid $quaternary-color;
+$border-secondary: 1px solid $quinary-color;
+
+// Border-radiuses
+$border-radius-primary: 0.3rem;
+
+// Box shadows
+$box-shadow-1: 10px 10px 50px #000000, -20px -20px 30px $primary-color;
+$box-shadow-2: rgba(50, 50, 50, 0.2) 0px 3px 6px,
+	rgba(50, 50, 50, 0.3) 0px 3px 6px;
+$box-shadow-3: rgba(0, 0, 0, 0.3) 0px 3px 6px, rgba(0, 0, 0, 0.4) 0px 3px 6px;

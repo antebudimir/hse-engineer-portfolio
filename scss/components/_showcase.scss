@@ -1,0 +1,25 @@
+// Showcase
+#showcase {
+	height: calc(100vh - 12rem);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	background-image: url(../img/showcase-mobile.png);
+
+	@include respond-to-width(600px) {
+		height: calc(100vh - 12rem);
+	}
+
+	@include respond-to-width(658px) {
+		height: calc(100vh - 10.9rem);
+	}
+
+	@include respond-to-width(1024px) {
+		height: calc(100vh - 14.6rem);
+		background-image: url(../img/showcase.jpg);
+	}
+
+	@include respond-to-w-and-h(1024px, 1200px) {
+		background-image: url(../img/showcase-mobile.png);
+	}
+}

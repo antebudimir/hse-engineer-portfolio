@@ -1,0 +1,83 @@
+// Header
+header {
+	z-index: 10;
+	position: sticky;
+	top: 0;
+	box-shadow: $box-shadow-1;
+	@include flex-layout(row, nowrap);
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem;
+	background: $primary-color;
+}
+
+.logo {
+	&:hover,
+	&:focus {
+		@include pop-on-hover-1;
+	}
+}
+
+.logo-img {
+	height: 3rem;
+	@include respond-to-width(1024px) {
+		height: 4rem;
+	}
+}
+
+#hamburger {
+	@include respond-to-width(1024px) {
+		display: none;
+	}
+}
+
+.fa-bars {
+	color: white;
+	font-size: 1.7rem;
+}
+
+.fa-times {
+	font-size: 2rem;
+	color: red;
+}
+
+.menu {
+	display: none;
+	position: fixed;
+	top: 5rem;
+	right: 0;
+	width: 100%;
+	height: calc(100% - 5rem);
+	background-color: $primary-color-high-opacity;
+
+	@include respond-to-width(1024px) {
+		@include flex-layout(row, nowrap);
+		position: initial;
+	}
+}
+
+.menu-item:not(:first-of-type):not(:last-of-type) {
+	margin: 1rem 0;
+	@include respond-to-width(1024px) {
+		margin: 0 3rem;
+	}
+}
+
+.menu-link {
+	border-radius: $border-radius-primary;
+	display: block;
+	width: 8.1rem;
+	padding: 1.3rem;
+	background-color: $secondary-color;
+	color: $primary-color;
+	font-size: 1.1rem;
+	text-align: center;
+	text-decoration: none;
+
+	@include respond-to-width(1024px) {
+		width: initial;
+		padding: 0;
+		background-color: initial;
+		color: $secondary-color;
+	}
+}

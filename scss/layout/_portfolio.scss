@@ -1,0 +1,105 @@
+// Portfolio
+#fgp,
+#protecta {
+	background-color: $primary-color;
+	background-color: $primary-color-high-opacity;
+	color: $secondary-color;
+}
+
+#yamal,
+#prima {
+	color: $primary-color;
+}
+
+#fgp,
+#yamal,
+#protecta,
+#prima {
+	@include respond-to-width(1024px) {
+		@include flex-layout(row, nowrap);
+	}
+}
+
+.side-image {
+	width: 100%;
+	@include respond-to-width(1024px) {
+		max-width: 42%;
+		object-fit: cover;
+	}
+}
+
+#yamal .side-image,
+#prima .side-image {
+	order: 2;
+}
+
+// desktop wrapper
+.wrapper {
+	@include respond-to-width(768px) {
+		margin: auto;
+		padding: calc(1rem + 5vw);
+	}
+}
+
+.content {
+	@include flex-layout(column, nowrap);
+	padding: 1rem;
+}
+
+.role,
+.website {
+	font-size: 0.9rem;
+	font-style: italic;
+	line-height: 2;
+	text-align: center;
+
+	@include respond-to-width(1024px) {
+		font-size: 1.2rem;
+		line-height: 3;
+	}
+}
+
+.primary-role {
+	border-top: $border-primary;
+	border-bottom: $border-primary;
+}
+
+.secondary-role {
+	border-top: $border-secondary;
+	border-bottom: $border-secondary;
+}
+
+.primary-website {
+	border-bottom: $border-primary;
+
+	& a:hover,
+	& a:focus {
+		@include hover-properties-1;
+	}
+}
+
+.secondary-website {
+	border-bottom: $border-secondary;
+
+	& a {
+		color: $primary-color;
+	}
+
+	& a:hover,
+	& a:focus {
+		@include hover-properties-2;
+	}
+}
+
+.description {
+	font-size: 1rem;
+	line-height: 1.7;
+
+	@include respond-to-width(1024px) {
+		font-size: 1.2rem;
+	}
+}
+
+.secondary-description {
+	color: $text-color-1;
+}

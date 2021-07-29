@@ -1,0 +1,124 @@
+// Share buttons
+#sharing-links {
+	@include flex-layout(column, nowrap);
+	z-index: 3;
+	position: fixed;
+	left: 1rem;
+	bottom: 4.5rem;
+
+	@include respond-to-width(1024px) {
+		left: initial;
+		right: 1rem;
+	}
+}
+
+.sharing-link,
+.sharing-link.open {
+	opacity: 1;
+	position: relative;
+	border: none;
+	border-radius: $border-radius-primary;
+	overflow: hidden;
+	width: 3rem;
+	height: 3rem;
+	margin: 0.5rem 0;
+	transition: all 200ms;
+
+	&:hover,
+	&:focus {
+		@include pop-on-hover-1;
+	}
+
+	@include respond-to-width(1024px) {
+		cursor: pointer;
+	}
+}
+
+.sharing-link {
+	background: $primary-color-high-opacity;
+}
+
+.facebook,
+.whatsapp,
+.email {
+	opacity: 0;
+	overflow: hidden;
+	width: 0;
+	height: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.fa-share-alt,
+.fa-times,
+.fa-facebook,
+.fa-whatsapp,
+.fa-envelope-open-o {
+	color: rgb(255, 255, 255);
+	font-size: 1.5rem;
+}
+
+.fa-share-alt {
+	transform: translate(-5%, 10%);
+}
+
+.fa-envelope-open-o {
+	transform: translate(51%, 50%);
+}
+
+.fa-facebook {
+	transform: translate(110%, 55%);
+}
+
+.fa-whatsapp {
+	font-size: 1.7rem;
+	transform: translate(50%, 42%);
+}
+
+.facebook {
+	background: rgb(60, 91, 155);
+}
+
+.whatsapp {
+	background: rgb(11, 194, 4);
+}
+
+.email {
+	background: rgb(243, 187, 3);
+}
+
+.toggle,
+.toggle .fa-times {
+	display: none;
+}
+
+.toggle {
+	&.open .fa-times {
+		display: initial;
+		transform: rotate(0) scale(1);
+	}
+
+	&.open .fa-share-alt {
+		display: none;
+		transform: rotate(90deg) scale(0);
+	}
+
+	&.facebook {
+		transition-delay: 100ms;
+	}
+
+	&.whatsapp {
+		transition-delay: 50ms;
+	}
+
+	&.email {
+		transition-delay: 0ms;
+	}
+
+	&.open:hover > .fa-times,
+	&.open:hover {
+		background: $primary-color;
+		color: $secondary-color;
+		padding-top: 0.25rem;
+	}
+}

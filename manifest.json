@@ -1,0 +1,37 @@
+{
+	"name": "Ante Budimir | HSE Engineer",
+	"short_name": "Ante Budimir | HSE Engineer",
+	"description": "NEBOSH certified HSE Engineer with on-site, trainer and managerial experience. Fluent in Croatian, English & Russian.",
+	"start_url": "/",
+	"scope": ".",
+	"background_color": "#009a67",
+	"theme_color": "#009a67",
+	"display": "standalone",
+	"orientation": "portrait",
+	"dir": "ltr",
+	"lang": "en",
+	"categories": ["safety", "engineer", "construction", "hse", "multilingual"],
+	"icons": [
+		{
+			"src": "img/icons/icon-512x512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		},
+		{
+			"src": "img/icons/icon-384x384.png",
+			"sizes": "384x384",
+			"type": "image/png"
+		},
+		{
+			"src": "img/icons/icon-256x256.png",
+			"sizes": "256x256",
+			"type": "image/png"
+		},
+		{
+			"src": "img/icons/icon-192x192.png",
+			"sizes": "192x192",
+			"type": "image/png",
+			"purpose": "any maskable"
+		}
+	]
+}

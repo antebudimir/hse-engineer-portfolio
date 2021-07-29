@@ -1,0 +1,21 @@
+// Footer
+#footer {
+	padding: 1rem;
+	background: $primary-color;
+	color: $secondary-color;
+	text-align: center;
+}
+
+.fa-linkedin,
+.fa-skype {
+	font-size: 3rem;
+	color: $secondary-color;
+	padding: 0.5rem 0.7rem;
+}
+
+.fa-linkedin:hover,
+a:focus .fa-linkedin,
+.fa-skype:hover,
+a:focus .fa-skype {
+	@include pop-on-hover-2;
+}

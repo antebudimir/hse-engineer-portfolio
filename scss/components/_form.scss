@@ -1,0 +1,27 @@
+form {
+	text-align: center;
+}
+
+.form-group {
+	margin-bottom: 1rem;
+}
+
+label {
+	display: block;
+	margin: 1rem 0 0.2rem;
+}
+
+input,
+textarea {
+	border: 1px solid $primary-color;
+	border-radius: $border-radius-primary;
+	box-shadow: $box-shadow-2;
+	width: 100%;
+	max-width: 40rem;
+	padding: 1rem 0;
+	text-align: center;
+
+	&:focus-within {
+		box-shadow: 0 0 0 100vmax $primary-color-low-opacity;
+	}
+}

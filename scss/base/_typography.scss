@@ -1,0 +1,56 @@
+// @font-faces:
+@font-face {
+	font-family: 'Montserrat Regular';
+	src: url('../fonts/Montserrat-Regular.woff');
+}
+
+@font-face {
+	font-family: 'Montserrat SemiBold';
+	src: url('../fonts/Montserrat-SemiBold.woff');
+}
+
+// All fonts declared:
+html {
+	font-family: 'Montserrat Regular';
+}
+
+input,
+select,
+textarea,
+button {
+	color: inherit;
+	font-family: inherit;
+	font-size: inherit;
+}
+
+h2 {
+	margin: 1rem 0 0;
+	text-align: center;
+
+	@include respond-to-width(1024px) {
+		font-size: 2.5rem;
+	}
+}
+
+h3 {
+	margin: 1rem 0;
+	color: $primary-color;
+	text-align: center;
+	line-height: 1.5;
+
+	@include respond-to-width(600px) {
+		font-size: 1.6rem;
+	}
+}
+
+p {
+	margin: 1rem 0;
+	line-height: 1.7;
+}
+
+.menu-link,
+.read-more,
+.form-btn,
+#footer {
+	font-family: 'Montserrat SemiBold';
+}
