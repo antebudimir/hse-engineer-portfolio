@@ -8,10 +8,6 @@
 	& a {
 		color: $primary-color;
 	}
-	& a:hover,
-	& a:focus {
-		@include hover-properties-2;
-	}
 
 	@include respond-to-width(900px) {
 		max-width: 60rem;
@@ -27,6 +23,16 @@
 
 	@include respond-to-width(600px) {
 		height: 30rem;
+	}
+}
+
+#fgp-article,
+#prima-article,
+#protecta-article,
+#yamal-article {
+	& a:hover,
+	& a:focus {
+		@include hover-properties-2;
 	}
 }
 
